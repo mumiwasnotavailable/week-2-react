@@ -1,13 +1,21 @@
-function Card() {
+function Card({ kompanija }) {
     return (
         <div className="card">
-            <h2>IDK Studio</h2>
-            <p><strong>Oblast:</strong> IT</p>
-            <p><strong>Grad:</strong> Bihać</p>
+            <h2>{kompanija.naziv}</h2>
+
             <p>
-                Kompanija koja se bavi razvojem digitalnih rješenja,
-                web stranica i aplikacija.
+                <strong>Oblast:</strong> {kompanija.oblast}
             </p>
+
+            <p>
+                <strong>Grad:</strong> {kompanija.grad}
+            </p>
+
+            <p>
+                <strong>Broj zaposlenih:</strong> {kompanija.brojZaposlenih}
+            </p>
+
+            <p>{kompanija.opis}</p>
         </div>
     );
 }
