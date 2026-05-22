@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer className="footer">
-            <p>2026 SportBase React | Week 2 - Dan 6</p>
+            <p>2026 SportBase React | Week 2 projekat</p>
         </footer>
     );
 }

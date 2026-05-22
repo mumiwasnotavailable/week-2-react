@@ -1,11 +1,12 @@
-function Card({ sportas, prikaziDetalje }) {
+function Card({ sportas, prikaziDetalje, toggleFavorit, jeFavorit }) {
     return (
         <div className="card">
-            <img src={sportas.slika} alt={sportas.ime} />
+            <div className="card-image">
+                <img src={sportas.slika} alt={sportas.ime} />
+                <span>{sportas.sport}</span>
+            </div>
 
             <div className="card-content">
-                <span className="badge">{sportas.sport}</span>
-
                 <h2>{sportas.ime}</h2>
 
                 <p>
@@ -16,9 +17,18 @@ function Card({ sportas, prikaziDetalje }) {
                     <strong>Godina rođenja:</strong> {sportas.godina}
                 </p>
 
-                <button onClick={() => prikaziDetalje(sportas)}>
-                    Prikaži detalje
-                </button>
+                <div className="card-actions">
+                    <button onClick={() => prikaziDetalje(sportas)}>
+                        Detalji
+                    </button>
+
+                    <button
+                        className={jeFavorit ? "favorite active" : "favorite"}
+                        onClick={() => toggleFavorit(sportas.id)}
+                    >
+                        {jeFavorit ? "Favorit" : "Dodaj"}
+                    </button>
+                </div>
             </div>
         </div>
     );

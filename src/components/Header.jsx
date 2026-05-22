@@ -1,9 +1,20 @@
-function Header() {
+function Header({ darkMode, setDarkMode, brojFavorita }) {
     return (
-        <header className="header">
-            <h1>SportBase React</h1>
-            <p>Mini React aplikacija za prikaz poznatih sportaša</p>
-        </header>
+        <nav className="navbar">
+            <div className="nav-logo">
+                SportBase
+            </div>
+
+            <div className="nav-links">
+                <a href="#sportasi">Sportaši</a>
+                <a href="#detalji">Detalji</a>
+                <a href="#favoriti">Favoriti ({brojFavorita})</a>
+
+                <button onClick={() => setDarkMode(!darkMode)}>
+                    {darkMode ? "Light mode" : "Dark mode"}
+                </button>
+            </div>
+        </nav>
     );
 }
 

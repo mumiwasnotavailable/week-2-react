@@ -1,16 +1,37 @@
-# React + Vite
+# SportBase React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SportBase React je mini frontend aplikacija napravljena kao dio druge sedmice prakse.  
+Aplikacija prikazuje poznate sportaše kroz React komponente i omogućava pretragu, filtriranje i detaljni prikaz sportaša.
 
-Currently, two official plugins are available:
+## Funkcionalnosti
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Prikaz sportaša kroz kartice
+- Search funkcionalnost po imenu sportaša
+- Filter po vrsti sporta
+- Detaljni prikaz izabranog sportaša
+- Responsive dizajn
+- Korištenje lokalnih slika
+- Organizacija projekta kroz React komponente
 
-## React Compiler
+## Korištene tehnologije
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- HTML
+- CSS
+- JavaScript
+- React
+- Vite
 
-## Expanding the ESLint configuration
+## Struktura projekta
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── Card.jsx
+│   └── Footer.jsx
+├── pages/
+│   └── Home.jsx
+├── styles/
+│   └── App.css
+├── App.jsx
+└── main.jsx
