@@ -1,21 +1,25 @@
-function Card({ kompanija }) {
+function Card({ sportas, prikaziDetalje }) {
     return (
         <div className="card">
-            <h2>{kompanija.naziv}</h2>
+            <img src={sportas.slika} alt={sportas.ime} />
 
-            <p>
-                <strong>Oblast:</strong> {kompanija.oblast}
-            </p>
+            <div className="card-content">
+                <span className="badge">{sportas.sport}</span>
 
-            <p>
-                <strong>Grad:</strong> {kompanija.grad}
-            </p>
+                <h2>{sportas.ime}</h2>
 
-            <p>
-                <strong>Broj zaposlenih:</strong> {kompanija.brojZaposlenih}
-            </p>
+                <p>
+                    <strong>Država:</strong> {sportas.drzava}
+                </p>
 
-            <p>{kompanija.opis}</p>
+                <p>
+                    <strong>Godina rođenja:</strong> {sportas.godina}
+                </p>
+
+                <button onClick={() => prikaziDetalje(sportas)}>
+                    Prikaži detalje
+                </button>
+            </div>
         </div>
     );
 }
